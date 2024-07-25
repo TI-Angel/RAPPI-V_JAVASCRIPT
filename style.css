@@ -2,19 +2,31 @@
     height: 20px;
 }
 
+.custom-navbar{
+    background-color: rgba(15, 61, 137, 1);
+}
+.custom-navbar .nav-link{
+    color: rgb(253, 253, 253);
+}
+.custom-footer{
+    background-color: rgba(15, 61, 137, 1);
+}
+.custom-footer .d-autor{
+    color: rgb(253, 253, 253);
+}
 .nav-a-item{
     width: 90px;
     text-align: center;
     align-items: center;
 }
-.carousel-custom{
-    height: 150px;
-    object-fit: cover;
+.carousel-item{
+    max-height: 300px;
+    /* object-fit: cover; */
 }
 
-/* .footer{
-    height: 300px;
-} */
+.card-img-top{
+    height: 230px;
+}
 
 .red-social-img{
     height: 35px;
