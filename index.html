@@ -70,36 +70,13 @@
       </button>
     </div>
     
-    <!--categorias-->
+    <!--categorias y buscador-->
     <div class="container-fluid my-3">
       <div class="row justify-content-between">
-          <div class="col-12 d-sm-flex justify-content-center col-md-8 justify-content-md-start">
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="firstCheckbox" >
-              <label class="form-check-label" for="firstCheckbox">category</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="secondCheckbox" >
-              <label class="form-check-label" for="secondCheckbox">category</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="thirCheckbox" >
-              <label class="form-check-label" for="thirCheckbox">category</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="fourCheckbox" >
-              <label class="form-check-label" for="fourCheckbox">category</label>
-            </div>
-            <div class="form-check form-check-inline d-none d-lg-inline">
-              <input class="form-check-input" type="checkbox" id="fifthCheckbox" >
-              <label class="form-check-label" for="fifthCheckbox">category</label>
-            </div>
-          
-          </div>
-          <div class="d-none d-md-flex col-md-4 justify-content-end">
-            <form class="d-none d-md-flex" role="search">
-              <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
+          <div class="col-12 d-sm-flex justify-content-center col-md-12 justify-content-md-center" id="checkbox"></div>
+          <div class="d-none d-md-flex col-md-6 justify-content-start">
+            <form class="d-none d-md-flex my-3" role="search">
+              <input class="form-control" type="input" placeholder="Search events" aria-label="Search" id="buscar">
             </form>
           </div>
       </div>
@@ -107,96 +84,11 @@
     
     <!--tarjetas-->
     <div class="container-fluid">
-      <div class="row justify-content-center gap-2 p-25 mb-2" id="contenedor">
-        <div class="col-12 col-sm-5 col-md-4 col-lg-3 card p-0" id="card">
-            <img src="./resources/food_fair.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Festival of the collectivities</h5>
-              <p class="card-text">Enjoy your favorite dishes from different countries in a unique event for the whole family.</p>
-              <div class="card-bottom d-flex justify-content-between">
-                <p>Price: $5</p>
-                <a href="#" class="btn btn-primary">Details</a>
-              </div>
-            </div>
-        </div>
-        <div class="col-12 col-sm-5 col-md-4 col-lg-3 card p-0">
- 
-            <img src="./resources/outing_to_the_museum.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Art Exhibition</h5>
-              <p class="card-text">Let's go to the art museum for an incredible tour to learn about the largest dinosaurs.</p>
-              <div class="card-bottom d-flex justify-content-between">
-                <p>Price: $15</p>
-                <a href="#" class="btn btn-primary">Details</a>
-              </div>
-            </div>
-
-        </div>
-        <div class="col-12 col-sm-5 col-md-4 col-lg-3 card p-0">
-
-            <img src="./resources/costume_party.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Halloween Night</h5>
-              <p class="card-text">Come in your scariest costume character to win amazing prizes.</p>
-              <div class="card-bottom d-flex justify-content-between">
-                <p>Price: $12</p>
-                <a href="#" class="btn btn-primary">Details</a>
-              </div>
-            </div>
-
-        </div>
-        <div class="col-12 col-sm-5 col-md-4 col-lg-3 card p-0">
-
-            <img src="./resources/music_concert.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Metallica in concert</h5>
-              <p class="card-text">The only concert of the most emblematic band in the world.</p>
-              <div class="card-bottom d-flex justify-content-between">
-                <p>Price: $150</p>
-                <a href="#" class="btn btn-primary">Details</a>
-              </div>
-            </div>
-
-        </div>
-        <div class="col-12 col-sm-5 col-md-4 col-lg-3 card p-0">
-       
-            <img src="./resources/marathon.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">10k for life</h5>
-              <p class="card-text">Come and exercise, improve your health and lifestyle.</p>
-              <div class="card-bottom d-flex justify-content-between">
-                <p>Price: $3</p>
-                <a href="#" class="btn btn-primary">Details</a>
-              </div>
-            </div>
-
-        </div>
-        <div class="col-12 col-sm-5 col-md-4 col-lg-3 card p-0">
-         
-            <img src="./resources/books.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">School Book Fair</h5>
-              <p class="card-text">Bring your unused school book and bring the one you need.</p>
-              <div class="card-bottom d-flex justify-content-between">
-                <p>Price: $1</p>
-                <a href="#" class="btn btn-primary">Details</a>
-              </div>
-            </div>
-
-        </div>
-        <div class="col-12 col-sm-5 col-md-4 col-lg-3 card p-0">
-       
-            <img src="./resources/cinema.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Avengers</h5>
-              <p class="card-text">Marvel's Avengers 3d premiere the start of an epic saga with your best superheroes.</p>
-              <div class="card-bottom d-flex justify-content-between">
-                <p>Price: $250</p>
-                <a href="#" class="btn btn-primary">Details</a>
-              </div>
-            </div>
-        </div>
+      <div class="row justify-content-center gap-2 p-25 mb-2" id="contenedor"></div>
+      <div class="aviso" id="noResultado">
+        <p class="text-danger">NO ANSWERS FOUND WITH YOUR SEARCH!</p>
       </div>
+      
     </div> 
   </main>
 
