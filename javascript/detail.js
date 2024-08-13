@@ -195,77 +195,40 @@ const data = {
     ],
   };
 
-let container = document.getElementById("contenedor");
-const mostrarEventos = (listaEventos) => {
-  container.innerHTML = "";
-  listaEventos.forEach((evento) => {
-    const nuevaTarjeta = document.createElement("div");
-    if(data.currentDate <= evento.date){
-      nuevaTarjeta.className = "col-12 col-sm-5 col-md-4 col-lg-3 card p-0"
-      nuevaTarjeta.innerHTML = `
-        <img src="${evento.image}" class="card-img-top" alt="${evento.name}">
-      <div class="card-body">
-        <h5 class="card-title">${evento.name}</h5>
-        <p class="card-text">${evento.description}</p>
-        <div class="card-bottom d-flex justify-content-between">
-          <p>Price: $${evento.price}</p>
-          <a href="./pages/detail.html?id=${evento._id}" class="btn btn-primary">Details</a>
+
+  
+let urlObjeto = new URLSearchParams(window.location.search);
+console.log(urlObjeto);
+let eventId = urlObjeto.get('id');
+
+let detail = data.events.find(e => e._id === eventId);
+console.log(detail);
+let eventDetails = document.getElementById('container-detail');
+if(eventDetails){
+    eventDetails.innerHTML = `
+        <div class="card my-3 mx-auto d-flex aling-self-center custom-card-detail">
+        <div class="row g-0">
+          <div class="col-md-5">
+            <img src="${detail.image}" class="img-fluid rounded-start custom-img-detail" alt="...">
+          </div>
+          <div class="col-md-7">
+            <div class="card-body">
+              <h5 class="card-title">${detail.name}</h5>
+              <p class="card-text">${detail.description}</p>
+              <p class="card-text"><b>Date: </b>${detail.date}</p>
+              <p class="card-text"><b>Place: </b>${detail.place}</p>
+              <p class="card-text"><b>Capacity: </b>${detail.capacity}</p>
+              <p class="card-text"><b>Assitance: </b>${detail.assistance}</p>
+              <p class="card-text"><b>Price: </b>${detail.price}</p>
+            </div>
+          </div>
         </div>
-      </div>`;
-    container.appendChild(nuevaTarjeta);
+      </div>
+      `;
+      console.log("HECHO");
+    } else {
+      eventDetails.innerHTML = `<p>Event not found.</p>`;
     }
-  });
-};
-    
-//Generar Checkbox
-let contaierCheckbox = document.getElementById('checkbox');
-let categorias = [];
 
-data.events.forEach(event => {
-  if(!categorias.includes(event.category)){
-    categorias.push(event.category);
-  }
-});
-console.log(categorias);
-
-for (let i=0; i < categorias.length; i++){
-  let checkbox = document.createElement('div');
-  checkbox.className = 'form-check form-check-inline';
-  checkbox.innerHTML = `
-  <input class="form-check-input" type="checkbox" id="checkbox" value="${categorias[i]}">
-  <label class="form-check-label" for="checkbox">${categorias[i]}</label>`
-
-  contaierCheckbox.appendChild(checkbox);
-}
-
-//Buscador
-let buscarInput = document.getElementById("buscar");
-let mensajeNoEncontrado = document.getElementById("noResultado");
-const buscador = () => {
-  let buscarEventos = buscarInput.value.toLowerCase();
-  let filtrarEventos = data.events.filter((evento) => evento.name.toLocaleLowerCase().startsWith(buscarEventos));
-  
-  if(filtrarEventos.length === 0){
-    mensajeNoEncontrado.style.display = "block";
-  }
-  else {
-  mensajeNoEncontrado.style.display = "none";
-  }
-mostrarEventos(filtrarEventos);
-}
-buscarInput.addEventListener("input", buscador);
-
-//Checkbox
-document.getElementById("checkbox").addEventListener('change',(e)=>{
-  let chekeado = document.querySelectorAll('input[type=checkbox]:checked');
-  let eventosChekeados = Array.from(chekeado).map(checkbox => checkbox.value);
-  console.log(eventosChekeados);
-  
-  let filtrarEventosCheckbox = data.events.filter(events => 
-    eventosChekeados.length === 0 ||  eventosChekeados.includes(events.category));
-  mostrarEventos(filtrarEventosCheckbox);
-});
-
-mostrarEventos(data.events);
-
-    
+// let evento = data.events.filter(e => e._id == urlObjeto.get('btnDetail'));
+// console.log(evento);
