@@ -21,6 +21,9 @@ main {
 .custom-navbar .nav-link{
     color: rgb(253, 253, 253);
 }
+.custom-nav-link{
+    white-space: nowrap;
+}
 .custom-footer{
     background-color: rgba(15, 61, 137, 1);
 }
@@ -54,6 +57,7 @@ main {
 }
 .custom-card-detail{
     max-width: 750px;
+    margin: 8rem auto;
 }
 .custom-img-detail{
     height: 100%;
@@ -62,6 +66,12 @@ main {
 
 .aviso{
     display: none;
+}
+
+.custom-form{
+    justify-content: center;
+    margin: 30px 0px;
+    min-height: 30rem;
 }
 /* Footer */
 .custom-footer {

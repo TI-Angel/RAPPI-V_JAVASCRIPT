@@ -19,19 +19,19 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav nav-a-item">
             <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="../index.html">HOME</a>
+                <a class="nav-link custom-nav-link" aria-current="page" href="../index.html">HOME</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./upcoming.html">UPCOMING EVENTS</a>
+                <a class="nav-link custom-nav-link" href="./upcoming.html">UPCOMING EVENTS</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./past.html">PAST EVENTS</a>
+                <a class="nav-link custom-nav-link" href="./past.html">PAST EVENTS</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./contact.html">CONTACT</a>
+                <a class="nav-link custom-nav-link" href="./contact.html">CONTACT</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="./stats.html">STATS</a>
+                <a class="nav-link active custom-nav-link" href="./stats.html">STATS</a>
             </li>
           </ul>
         </div>
@@ -46,7 +46,7 @@
           <img src="../resources/optional_banner_1.jpg" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item carousel-custom">
-          <img src="./resources/optional_banner_2.jpg" class="d-block w-100" alt="...">
+          <img src="../resources/optional_banner_2.jpg" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item carousel-custom">
           <img src="../resources/optional_banner_3.jpg" class="d-block w-100" alt="...">
@@ -69,65 +69,44 @@
     </div>
 
     <div class="container">
-      <table class="table">
+      <table class="table" id="table">
         <thead>
           <tr>
             <th scope="col" colspan="3">Events statistics</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody class="tbody" id="tbody">
           <tr>
-            <td>Events with highest % of assistance</td>
-            <td>Events with lowest % of assistance</td>
-            <td>Events with larger capacity</td>
+            <td><b>Events with highest % of assistance</b></td>
+            <td><b>Events with lowest % of assistance</b></td>
+            <td><b>Events with larger capacity</b></td>    
+          </tr>
+          <tr id="porcentaje"></tr>
+          <tr>
+            <th scope="col" colspan="3">Upcoming events statistics by category</th>
+          </tr>
+          <tr>
+            <td><b>Categories</b></td>
+            <td><b>Revenues</b></td>
+            <td><b>Percentage of assitance</b></td>
           
           </tr>
-          <tr>
-            <td>#</td>
-            <td>#</td>
-            <td>#</td>
-          </tr>
-       
-            <tr>
-              <th scope="col" colspan="3">Upcoming events statistics by category</th>
-            </tr>
-        
-            <tr>
-              <td>Categories</td>
-              <td>Revenues</td>
-              <td>Percentage of assitance</td>
-            
-            </tr>
-            <tr>
-              <td>#</td>
-              <td>#</td>
-              <td>#</td>
-            </tr>
-            <tr>
-              <td>#</td>
-              <td>#</td>
-              <td>#</td>
-            </tr>
-          </tbody>
+          <tr id="eventosFuturos"></tr>
       
             <tr>
               <th scope="col" colspan="3">Past events statistics by category</th>
             </tr>
             <tr>
-              <td>Categories</td>
-              <td>Revenues</td>
-              <td>Percentage of assitance</td>
+              <td><b>Categories</b></td>
+              <td><b>Revenues</b></td>
+              <td><b>Percentage of assitance</b></td>
             
             </tr>
             <tr>
-              <td>#</td>
-              <td>#</td>
-              <td>#</td>
+
             </tr>
             <tr>
-              <td>#</td>
-              <td>#</td>
-              <td>#</td>
+
             </tr>
           </tbody>
       </table>

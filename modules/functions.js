@@ -12,7 +12,7 @@ export function mostrarEventos(listaEventos) {
         <p class="card-text">${evento.description}</p>
         <div class="card-bottom d-flex justify-content-between">
           <p>Price: $${evento.price}</p>
-          <a href="./pages/detail.html?id=${evento._id}" class="btn btn-primary">Details</a>
+          <a href="../pages/detail.html?id=${evento._id}" class="btn btn-primary">Details</a>
         </div>
       </div>`;
     container.appendChild(nuevaTarjeta);
